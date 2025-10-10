@@ -114,8 +114,8 @@ export default function SOSButton({ onBack }: SOSButtonProps) {
 
   if (activated) {
     return (
-      <div className="max-w-2xl mx-auto">
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-slate-200">
+      <div className="max-w-2xl mx-auto animate-scale-in">
+        <div className="bg-white rounded-xl p-8 shadow-2xl border border-slate-200 animate-scale-in">
           <div className="text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
               <CheckCircle className="h-10 w-10 text-green-600" />
@@ -162,8 +162,8 @@ export default function SOSButton({ onBack }: SOSButtonProps) {
 
   if (showCountdown) {
     return (
-      <div className="max-w-2xl mx-auto">
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-slate-200">
+      <div className="max-w-2xl mx-auto animate-scale-in">
+        <div className="bg-white rounded-xl p-8 shadow-2xl border border-slate-200 animate-scale-in">
           <div className="text-center">
             <div className="w-32 h-32 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
               <span className="text-6xl font-bold text-red-600">{countdown}</span>

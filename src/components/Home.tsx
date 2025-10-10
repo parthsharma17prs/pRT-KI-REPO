@@ -6,8 +6,10 @@ interface HomeProps {
 
 export default function Home({ onNavigate }: HomeProps) {
   return (
-    <div className="space-y-6">
-      <div className="bg-gradient-to-r from-rose-600 to-rose-700 rounded-2xl p-8 text-white shadow-xl">
+    <div className="space-y-6 animate-scale-in">
+      <div className="bg-gradient-to-r from-rose-600 to-rose-700 rounded-2xl p-8 text-white shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] relative overflow-hidden">
+        <div className="absolute inset-0 shimmer-bg opacity-20"></div>
+        <div className="relative z-10">
         <h2 className="text-3xl font-bold mb-3">Welcome to Suraksha</h2>
         <p className="text-rose-100 text-lg mb-6">
           Your safety is our priority. Report incidents safely and anonymously, or get immediate help with our Silent SOS feature.
@@ -15,16 +17,17 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="flex flex-wrap gap-3">
           <button
             onClick={() => onNavigate('report')}
-            className="bg-white text-rose-600 px-6 py-3 rounded-lg font-semibold hover:bg-rose-50 transition-all shadow-md hover:shadow-lg"
+            className="bg-white text-rose-600 px-6 py-3 rounded-lg font-semibold hover:bg-rose-50 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 active:scale-95 transform"
           >
             Report an Incident
           </button>
           <button
             onClick={() => onNavigate('track')}
-            className="bg-rose-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-rose-900 transition-all shadow-md hover:shadow-lg"
+            className="bg-rose-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-rose-900 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 active:scale-95 transform"
           >
             Track Your Report
           </button>
+        </div>
         </div>
       </div>
 
@@ -115,13 +118,13 @@ function ActionCard({
   onClick: () => void;
 }) {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 hover:shadow-lg transition-shadow">
-      <div className="mb-4">{icon}</div>
+    <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 hover:shadow-xl transition-all duration-500 hover:scale-[1.03] hover:-translate-y-1 group">
+      <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{icon}</div>
       <h3 className="text-xl font-bold text-slate-900 mb-2">{title}</h3>
       <p className="text-slate-600 mb-4">{description}</p>
       <button
         onClick={onClick}
-        className={`w-full px-4 py-3 rounded-lg font-semibold transition-colors ${buttonClass}`}
+        className={`w-full px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 active:scale-95 transform hover:shadow-lg ${buttonClass}`}
       >
         {buttonText}
       </button>
@@ -139,8 +142,8 @@ function Step({
   description: string;
 }) {
   return (
-    <div className="text-center">
-      <div className="w-12 h-12 bg-rose-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">
+    <div className="text-center group">
+      <div className="w-12 h-12 bg-rose-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300 group-hover:shadow-rose-600/50">
         {number}
       </div>
       <h4 className="font-bold text-slate-900 mb-2">{title}</h4>

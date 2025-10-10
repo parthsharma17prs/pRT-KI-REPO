@@ -209,7 +209,7 @@ export default function ReportIncident({ onBack }: ReportIncidentProps) {
             <select
               value={incidentType}
               onChange={(e) => setIncidentType(e.target.value)}
-              className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all duration-300 hover:border-rose-300"
               required
             >
               <option value="">Select incident type</option>
@@ -269,7 +269,7 @@ export default function ReportIncident({ onBack }: ReportIncidentProps) {
               accept="image/*,video/*"
               multiple
               onChange={handleMediaChange}
-              className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all duration-300 hover:border-rose-300"
             />
             {mediaFiles.length > 0 && (
               <p className="text-sm text-slate-600 mt-2">
@@ -305,7 +305,7 @@ export default function ReportIncident({ onBack }: ReportIncidentProps) {
                 value={contactPhone}
                 onChange={(e) => setContactPhone(e.target.value)}
                 placeholder="Enter your phone number"
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all duration-300 hover:border-rose-300"
                 required={!isAnonymous}
               />
             </div>

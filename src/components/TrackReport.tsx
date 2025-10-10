@@ -157,8 +157,8 @@ export default function TrackReport({ onBack }: TrackReportProps) {
       </div>
 
       {reportData && (
-        <div className="space-y-6">
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200">
+        <div className="space-y-6 animate-slide-in-up">
+          <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 hover:shadow-2xl transition-all duration-500">
             <div className="flex items-start justify-between mb-6">
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
@@ -264,7 +264,7 @@ export default function TrackReport({ onBack }: TrackReportProps) {
             )}
           </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200">
+          <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 hover:shadow-2xl transition-all duration-500">
             <div className="flex items-start">
               <MapPin className="h-5 w-5 text-slate-600 mt-0.5 mr-3 flex-shrink-0" />
               <div className="flex-1">

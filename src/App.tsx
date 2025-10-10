@@ -157,10 +157,10 @@ function NavButton({
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-2 rounded-lg font-medium transition-all ${
+      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 active:scale-95 ${
         active
-          ? 'bg-rose-600 text-white shadow-md'
-          : 'text-slate-700 hover:bg-slate-100'
+          ? 'bg-rose-600 text-white shadow-lg shadow-rose-600/30'
+          : 'text-slate-700 hover:bg-slate-100 hover:shadow-md'
       }`}
     >
       {children}
@@ -180,10 +180,10 @@ function MobileNavButton({
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-3 rounded-lg font-medium transition-all text-left flex items-center ${
+      className={`px-4 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-102 active:scale-98 text-left flex items-center ${
         active
-          ? 'bg-rose-600 text-white shadow-md'
-          : 'text-slate-700 hover:bg-slate-100'
+          ? 'bg-rose-600 text-white shadow-lg shadow-rose-600/30'
+          : 'text-slate-700 hover:bg-slate-100 hover:shadow-md'
       }`}
     >
       {children}
